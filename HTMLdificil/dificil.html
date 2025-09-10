@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Duolingo 2.0 - Difícil</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <img src="../LOGOpuenteñuble/puente.png" alt="Logo de Puente Ñuble" class="logo">
+  <div class="app">
+    <h1>LOT — Nivel Difícil</h1>
+
+    <div class="stats">
+      <span>🔥 Racha: <span id="streak">0</span></span>
+      <span>⭐ XP: <span id="xp">0</span></span>
+      <span>❤️ <span id="hearts">3</span></span>
+    </div>
+
+    <div id="lessonContainer"></div>
+
+    <div style="text-align:center; margin-top:10px;">
+      <button id="resetBtn" class="btn btn-blue">🔄 Reiniciar</button>
+      <a href="../HTMLportada/index.html" class="back-btn btn-blue">⬅ Volver al inicio</a>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+<script>
+  // Ejercicios difíciles
+  const LESSONS = [
+    { id: 7, phrase: "Hello my name is Esteban, how are you", 
+      answer: "hello my name is esteban, how are you", 
+      hint: "Presentación completa", 
+      audio: "../AUDIOS/hello my name is esteban, how are you.mp3" },
+
+    { id: 8, phrase: "Good morning", 
+      answer: "good morning", 
+      hint: "Buenos días", 
+      audio: "../AUDIOS/good morning.mp3" },
+
+    { id: 9, phrase: "Bye", 
+      answer: "bye", 
+      hint: "Despedida", 
+      audio: "../AUDIOS/bye.mp3" },
+
+    { id: 10, phrase: "I want a coffee with milk please and a cookie", 
+      answer: "i want a coffee with milk please and a cookie", 
+      hint: "Pedido complejo en un café", 
+      audio: "../AUDIOS/I want a coffee with milk please and a cookie.mp3" }
+  ];
+  setCurrentLessons(LESSONS);
+  initLessons(LESSONS, { ns: "hard" });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* ===== Fondo general (match a tu captura) ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #2dd4bf, #10b981); /* turquesa->verde */
+  color: white;
+}
+
+/* ===== Contenedor app (tarjeta grande oscura, centrada) ===== */
+.app {
+  max-width: 820px;
+  margin: 20px auto;
+  background: #0f172a; /* muy oscuro */
+  border-radius: 24px;
+  padding: 28px 22px 34px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+}
+
+/* Título app */
+.app h1 {
+  text-align: center;
+  margin: 0 0 12px;
+  color: #86efac; /* verde duolingo-ish */
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+}
+
+/* ===== Stats ===== */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  opacity: 0.95;
+}
+
+/* ===== Tarjeta de ejercicio ===== */
+.card {
+  background: #334155; /* gris oscuro */
+  border-radius: 18px;
+  padding: 24px 22px;
+  margin: 22px auto;
+  max-width: 680px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  text-align: center;
+  color: white;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+}
+
+/* ===== Inputs ===== */
+.card input[type="text"] {
+  width: 85%;
+  max-width: 520px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  margin: 10px 0 12px;
+}
+
+/* ===== Botones genéricos ===== */
+.btn {
+  margin: 6px 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Variantes */
+.btn-green  { background: #22c55e; } /* Reproducir / Comparar */
+.btn-amber  { background: #f59e0b; } /* Pista */
+.btn-blue   { background: #2563eb; } /* Volver / Reiniciar */
+.btn-red    { background: #ef4444; } /* Difícil si la usas */
+
+/* Disabled + candado */
+button:disabled,
+input:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+button:disabled::after {
+  content: " 🔒";
+}
+
+/* Feedback */
+.feedback {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* ===== Botón back (link con estilo botón) ===== */
+.back-btn {
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+.back-btn.btn-blue:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+
+/* ===== Menú de portada (modificado) ===== */
+body.menu {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para el footer */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu .container {
+  background: #0f172a;
+  padding: 36px 28px;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+  text-align: center;
+  width: 92%;
+  max-width: 640px;
+  margin-bottom: 20px; /* Espacio para el footer */
+}
+
+.menu h1 {
+  color: #86efac;
+  margin: 0 0 12px;
+}
+
+.menu p {
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.modes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+.modes a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  padding: 14px 18px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.modes a:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+.easy   { background: #22c55e; }
+.medium { background: #f59e0b; }
+.hard   { background: #ef4444; }
+
+/* Nuevo footer */
+.menu footer {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  text-align: center;
+  background-color: #0f172a50;
+  ;
+  
+}
+
+@media (min-width: 560px) {
+  .modes { grid-template-columns: repeat(3,1fr); }
+}
+
+/* ... (todo el código CSS anterior) ... */
+
+/* Estilos para la imagen del logo */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 80px; /* Ajusta el tamaño si es necesario */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+@media (min-width: 560px) {
+  .modes { grid-template-columns: repeat(3,1fr); }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Duolingo 2.0 - Medio</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <img src="../LOGOpuenteñuble/puente.png" alt="Logo de Puente Ñuble" class="logo">
+  <div class="app">
+    <h1>LOT — Nivel Medio</h1>
+
+    <div class="stats">
+      <span>🔥 Racha: <span id="streak">0</span></span>
+      <span>⭐ XP: <span id="xp">0</span></span>
+      <span>❤️ <span id="hearts">3</span></span>
+    </div>
+
+    <div id="lessonContainer"></div>
+
+    <div style="text-align:center; margin-top:10px;">
+      <button id="resetBtn" class="btn btn-blue">🔄 Reiniciar</button>
+      <a href="../HTMLportada/index.html" class="back-btn btn-blue">⬅ Volver al inicio</a>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+<script>
+  // Ejercicios medios
+  const LESSONS = [
+    { id: 4, phrase: "12345",                 answer: "12345",                 hint: "Números básicos", audio: "../AUDIOS/12345.mp3" },
+    { id: 5, phrase: "Where is the coffee",   answer: "where is the coffee",   hint: "¿Dónde está el café?", audio: "../AUDIOS/where is the coffe.mp3" },
+    { id: 6, phrase: "Hello",                 answer: "hello",                 hint: "Repaso saludo", audio: "../AUDIOS/hello.mp3" },
+    { id: 7, phrase: "How many dogs do you have", answer: "how many dogs do you have", hint: "Pregunta sobre cantidad de perros", audio: "../AUDIOS/how many dogs do you have.mp3" }
+  ];
+  setCurrentLessons(LESSONS);
+  initLessons(LESSONS, { ns: "medium" });
+</script>
+
+</body>
+</html>

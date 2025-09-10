@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Duolingo 2.0 - Fácil</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <img src="../LOGOpuenteñuble/puente.png" alt="Logo de Puente Ñuble" class="logo">
+  <div class="app">
+    <h1>LOT — Nivel Fácil</h1>
+
+    <div class="stats">
+      <span>🔥 Racha: <span id="streak">0</span></span>
+      <span>⭐ XP: <span id="xp">0</span></span>
+      <span>❤️ <span id="hearts">3</span></span>
+    </div>
+
+    <div id="lessonContainer"></div>
+
+    <div style="text-align:center; margin-top:10px;">
+      <button id="resetBtn" class="btn btn-blue">🔄 Reiniciar</button>
+      <a href="../HTMLportada/index.html" class="back-btn btn-blue">⬅ Volver al inicio</a>
+    </div>
+  </div>
+  <script src="../script.js"></script>
+<script>
+  // Ejercicios fáciles
+  const LESSONS = [
+    { id: 1, phrase: "Hello",         answer: "hello",         hint: "Significa Hola",          audio: "../AUDIOS/hello.mp3" },
+    { id: 2, phrase: "Good morning",  answer: "good morning",  hint: "Significa Buenos días",   audio: "../AUDIOS/good morning.mp3" },
+    { id: 3, phrase: "Bye",           answer: "bye",           hint: "Significa Adiós",         audio: "../AUDIOS/bye.mp3" },
+    { id: 4, phrase: "It's a beautiful day", answer: "it's a beautiful day", hint: "Frase positiva: Es un día hermoso", audio: "../AUDIOS/It's a beautiful day.mp3" }
+  ];
+  setCurrentLessons(LESSONS);
+  initLessons(LESSONS, { ns: "easy" });
+</script>
+
+</body>
+</html>
